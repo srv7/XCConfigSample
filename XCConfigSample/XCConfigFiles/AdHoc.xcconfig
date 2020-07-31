@@ -1,0 +1,16 @@
+//
+//  AdHoc.xcconfig
+//  XCConfigSample
+//
+//  Created by 刘波 on 2020/7/31.
+//  Copyright © 2020 struggleblog. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// 注意 Standard.xcconfig 的路径
+#include "Standard.xcconfig"
+
+// AdHoc 所需要的配置跟标准配置不完全相同, 需要复写有差异的配置项
+APP_HOST = https:/$()/adhoc.struggleblog.com

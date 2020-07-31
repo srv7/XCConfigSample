@@ -1,0 +1,14 @@
+//
+//  Standard.xcconfig
+//  XCConfigSample
+//
+//  Created by 刘波 on 2020/7/31.
+//  Copyright © 2020 struggleblog. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_HOST = https:/$()/release.struggleblog.com
+ENABLE_LOGGING = false
+SDK_APPID = 1019154125

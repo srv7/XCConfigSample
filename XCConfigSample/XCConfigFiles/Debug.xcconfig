@@ -1,0 +1,19 @@
+//
+//  Debug.xcconfig
+//  XCConfigSample
+//
+//  Created by 刘波 on 2020/7/31.
+//  Copyright © 2020 struggleblog. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// 注意 Standard.xcconfig 的路径
+#include "Standard.xcconfig"
+
+// AdHoc 所需要的配置跟标准配置完全不相同, 复写所有有差异的配置项
+APP_HOST = https:/$()/debug.struggleblog.com
+ENABLE_LOGGING = true
+SDK_APPID = 2732648263
+
