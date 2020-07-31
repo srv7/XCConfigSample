@@ -12,5 +12,11 @@
 // 注意 Standard.xcconfig 的路径
 #include "Standard.xcconfig"
 
+// 命名约定，以 prefix_realname_suffix 的形式添加 Key-Value, 其中
+// prefix 固定为 CONFIG
+// realname 为真正的 Key
+// suffix 为 Value 的类型，如 String、Int、Bool、UInt32 等
+// 以 CONFIG 开头是为了在运行脚本时把自定义的变量跟系统变量区分开
+
 // AdHoc 所需要的配置跟标准配置不完全相同, 需要复写有差异的配置项
-APP_HOST = https:/$()/adhoc.struggleblog.com
+CONFIG_APP_HOST_String = https:/$()/adhoc.struggleblog.com

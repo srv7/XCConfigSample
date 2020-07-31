@@ -13,14 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(Config.APP_HOST)
+        print(Config.ENABLE_LOGGING)
+        print(Config.SDK_APPID)
         
-        print(Config.appHost)
-        print(Config.enableLogging)
-        print(Config.sdkAppID)
-        
-        print(type(of: Config.appHost))
-        print(type(of: Config.enableLogging))
-        print(type(of: Config.sdkAppID))
+        print(type(of: Config.APP_HOST))
+        print(type(of: Config.ENABLE_LOGGING))
+        print(type(of: Config.SDK_APPID))
         
     }
 

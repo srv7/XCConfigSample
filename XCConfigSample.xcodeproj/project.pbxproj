@@ -30,6 +30,7 @@
 		3AC6C36624D4111800743F44 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3AC6C36724D4126C00743F44 /* Standard.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Standard.xcconfig; sourceTree = "<group>"; };
 		3AC6C36A24D413BE00743F44 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3AC6C36D24D41B0400743F44 /* ConfigGenerator.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ConfigGenerator.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 				3AC6C34D24D410A400743F44 /* SceneDelegate.swift */,
 				3AC6C34F24D410A400743F44 /* ViewController.swift */,
 				3AC6C36A24D413BE00743F44 /* Config.swift */,
+				3AC6C36D24D41B0400743F44 /* ConfigGenerator.sh */,
 				3AC6C35124D410A400743F44 /* Main.storyboard */,
 				3AC6C35424D410A700743F44 /* Assets.xcassets */,
 				3AC6C35624D410A700743F44 /* LaunchScreen.storyboard */,
@@ -93,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC6C35C24D410A700743F44 /* Build configuration list for PBXNativeTarget "XCConfigSample" */;
 			buildPhases = (
+				3AC6C36E24D41B1200743F44 /* Generating Config */,
 				3AC6C34424D410A400743F44 /* Sources */,
 				3AC6C34524D410A400743F44 /* Frameworks */,
 				3AC6C34624D410A400743F44 /* Resources */,
@@ -171,6 +174,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "pushd ${SRCROOT}/XCConfigSample/XCConfigFiles\n    for file in *; do\n        if [[ \"${file}\" == *\".xcconfig\" ]]; then\n            echo \"🔐：锁定${file}文件\"\n            chmod -R -w \"${file}\" #删除文件的写权限\n        fi\n    done\npopd\n\n\n";
+		};
+		3AC6C36E24D41B1200743F44 /* Generating Config */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generating Config";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/XCConfigSample/ConfigGenerator.sh\" > \"${PROJECT_DIR}/XCConfigSample/Config.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

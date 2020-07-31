@@ -9,6 +9,13 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-APP_HOST = https:/$()/release.struggleblog.com
-ENABLE_LOGGING = false
-SDK_APPID = 1019154125
+// 命名约定，以 prefix_realname_suffix 的形式添加 Key-Value, 其中
+// prefix 固定为 CONFIG
+// realname 为真正的 Key
+// suffix 为 Value 的类型，如 String、Int、Bool、UInt32 等
+// 以 CONFIG 开头是为了在运行脚本时把自定义的变量跟系统变量区分开
+
+
+CONFIG_APP_HOST_String = https:/$()/release.struggleblog.com
+CONFIG_ENABLE_LOGGING_Bool = false
+CONFIG_SDK_APPID_Int = 1019154125
