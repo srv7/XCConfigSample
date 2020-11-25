@@ -4,7 +4,7 @@
 import Foundation
 struct Config {
 	private init() {}
-	static let ENABLE_LOGGING: Bool = true
-	static let SDK_APPID: String = "2732648263"
-	static let APP_HOST: String = "https://debug.struggleblog.com"
+	static let ENABLE_LOGGING: Bool = false
+	static let SDK_APPID: String = "1019154125"
+	static let APP_HOST: String = "https://release.struggleblog.com"
 }
