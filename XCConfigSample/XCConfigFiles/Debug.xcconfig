@@ -12,8 +12,13 @@
 // 注意 Standard.xcconfig 的路径
 #include "Standard.xcconfig"
 
+// 命名约定，以 prefix_realname_suffix 的形式添加 Key-Value, 其中
+// prefix 固定为 CONFIG
+// realname 为真正的 Key
+// suffix 为 Value 的类型，如 String、Int、Bool、UInt32 等
+
 // AdHoc 所需要的配置跟标准配置完全不相同, 复写所有有差异的配置项
-APP_HOST = https:/$()/debug.struggleblog.com
-ENABLE_LOGGING = true
-SDK_APPID = 2732648263
+STRUGGLE_APP_HOST_String = https:/$()/debug.struggleblog.com
+STRUGGLE_ENABLE_LOGGING_Bool = true
+STRUGGLE_SDK_APPID_String = 2732648263
 

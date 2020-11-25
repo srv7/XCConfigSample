@@ -12,4 +12,9 @@
 // 注意 Standard.xcconfig 的路径
 #include "Standard.xcconfig"
 
+// 命名约定，以 prefix_realname_suffix 的形式添加 Key-Value, 其中
+// prefix 固定为 CONFIG
+// realname 为真正的 Key
+// suffix 为 Value 的类型，如 String、Int、Bool、UInt32 等
+
 // Release 所需要的配置跟标准配置相同, 不需要复写配置项

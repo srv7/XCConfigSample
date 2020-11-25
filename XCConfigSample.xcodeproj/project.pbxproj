@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA65D89256E25830068F4FE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA65D88256E25830068F4FE /* Config.swift */; };
 		3AC6C34C24D410A400743F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6C34B24D410A400743F44 /* AppDelegate.swift */; };
 		3AC6C34E24D410A400743F44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6C34D24D410A400743F44 /* SceneDelegate.swift */; };
 		3AC6C35024D410A400743F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6C34F24D410A400743F44 /* ViewController.swift */; };
 		3AC6C35324D410A400743F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6C35124D410A400743F44 /* Main.storyboard */; };
 		3AC6C35524D410A700743F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6C35424D410A700743F44 /* Assets.xcassets */; };
 		3AC6C35824D410A700743F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6C35624D410A700743F44 /* LaunchScreen.storyboard */; };
-		3AC6C36B24D413BE00743F44 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6C36A24D413BE00743F44 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AA65D82256E088C0068F4FE /* Config.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Config.sh; sourceTree = "<group>"; };
+		3AA65D88256E25830068F4FE /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3AC6C34824D410A400743F44 /* XCConfigSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCConfigSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC6C34B24D410A400743F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AC6C34D24D410A400743F44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +31,6 @@
 		3AC6C36524D4110200743F44 /* AdHoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AdHoc.xcconfig; sourceTree = "<group>"; };
 		3AC6C36624D4111800743F44 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3AC6C36724D4126C00743F44 /* Standard.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Standard.xcconfig; sourceTree = "<group>"; };
-		3AC6C36A24D413BE00743F44 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +67,8 @@
 				3AC6C34B24D410A400743F44 /* AppDelegate.swift */,
 				3AC6C34D24D410A400743F44 /* SceneDelegate.swift */,
 				3AC6C34F24D410A400743F44 /* ViewController.swift */,
-				3AC6C36A24D413BE00743F44 /* Config.swift */,
+				3AA65D82256E088C0068F4FE /* Config.sh */,
+				3AA65D88256E25830068F4FE /* Config.swift */,
 				3AC6C35124D410A400743F44 /* Main.storyboard */,
 				3AC6C35424D410A700743F44 /* Assets.xcassets */,
 				3AC6C35624D410A700743F44 /* LaunchScreen.storyboard */,
@@ -93,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC6C35C24D410A700743F44 /* Build configuration list for PBXNativeTarget "XCConfigSample" */;
 			buildPhases = (
+				3AA65D81256E08290068F4FE /* Generating Build Configuration */,
 				3AC6C34424D410A400743F44 /* Sources */,
 				3AC6C34524D410A400743F44 /* Frameworks */,
 				3AC6C34624D410A400743F44 /* Resources */,
@@ -154,6 +157,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3AA65D81256E08290068F4FE /* Generating Build Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generating Build Configuration";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/${PRODUCT_NAME}/Config.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/${PRODUCT_NAME}/Config.sh\" > \"${SRCROOT}/${PRODUCT_NAME}/Config.swift\"\n\n";
+		};
 		3AC6C36C24D416F300743F44 /* Lock Config Files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC6C35024D410A400743F44 /* ViewController.swift in Sources */,
+				3AA65D89256E25830068F4FE /* Config.swift in Sources */,
 				3AC6C34C24D410A400743F44 /* AppDelegate.swift in Sources */,
-				3AC6C36B24D413BE00743F44 /* Config.swift in Sources */,
 				3AC6C34E24D410A400743F44 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
